@@ -1,7 +1,8 @@
 package org.partbiz;
 
-import org.partbiz.repository.InMemoryClientRepository;
+import org.partbiz.repository.ClientRepository;
 import org.partbiz.service.BankService;
+import org.partbiz.service.JDBCClientRepository;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,7 +15,7 @@ public class Main {
     }
 
     public void run() {
-        final InMemoryClientRepository repository = new InMemoryClientRepository(new ArrayList<>());
+        final ClientRepository repository = new JDBCClientRepository();
         bankService= new BankService(repository);
 
         try (Scanner scanner=new Scanner(System.in)) {

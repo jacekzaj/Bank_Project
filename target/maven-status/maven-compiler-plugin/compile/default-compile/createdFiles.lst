@@ -1,1 +1,5 @@
+org\partbiz\repository\InMemoryClientRepository.class
+org\partbiz\repository\ClientRepository.class
+org\partbiz\service\BankService.class
 org\partbiz\Client.class
+org\partbiz\Main.class
